@@ -13,11 +13,21 @@ The goal of this project is to create a generator that creates a password. This 
 
 ## Screeshots/Image
 --Basic rough draft of the password generator code--
-![Rough Draft](./screenshots/screenshot1.jpg)
+![Rough Draft](./screenshots/screenshot1.JPG)
 
 
 --The generator in action where the results are shown in the console log--
-![Generator in Action](./screenshots/screenshot2.jpg)
+![Generator in Action](./screenshots/screenshot2.JPG)
+
+
+--Adding boolean values used to check if a certain password criteria is selected--
+--Input prompt for user length password and criteria prompts--
+![Criteria Prompts](./screenshots/screenshot3.JPG)
+
+
+--User prompts in action--
+![User Prompts in Action](./screenshots/screenshot4.JPG)
+
 
 
 ## Working Application
