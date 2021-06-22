@@ -29,6 +29,21 @@ var charCheck = false;
 
 var genPass = function() {
 
+  // This asks the user how long they want the password to be. 
+  // It can be anywhere between 8 to 128 characters long.
+  // This while loop will keep repeating until a number is selected that is between 8 and 128
+  // Any lower or higher the loop will keep repeating
+  while (passlength < 8 || passlength > 128) {
+    passlength = window.prompt("How long do you want your password? (Pick a number between 8 and 128)");
+  }
+  
+  // These confirm prompts ask the user if they would like to use certain characters in their password.
+  // If they click, "Okay" it returns true, if "Cancel" it returns false. 
+
+  charUpOn = window.confirm("Do you want Upper Case Characters?");
+  numOn = window.confirm("Do you want Numbers?")
+  specCharOn = window.confirm("Do you want Special Characters?");
+
   for (var a = 0; a < passlength; a++) {
 
     // This variables are random number generators that will a generate a random number based on the length
@@ -57,13 +72,8 @@ var genPass = function() {
 
   }
 
-  // console.log(pass);
-  // console.log(charUpCheck);
-  // console.log(numOnCheck);
-  // console.log(specCharCheck);
-  // console.log(charCheck);
-
   if (!charUpOn || !numOn || !specCharOn) {
+    window.alert("This is your new password: " + pass);
     console.log(pass);
   } else if (!charUpCheck || !numOnCheck || !specCharCheck || !charCheck) {
     a = 0;
@@ -71,28 +81,20 @@ var genPass = function() {
     console.log("failed pass")
     genPass();
   } else {
+    window.alert("This is your new password: " + pass);
+    
     console.log(pass);
   }
 
+  var renewPass = window.confirm("Do you want to make a new Password?");
+  if (renewPass) {
+    a = 0;
+    pass = "";
+    passlength = 0;
+    genPass();
+  }
+
 }
-
-// This asks the user how long they want the password to be. 
-// It can be anywhere between 8 to 128 characters long.
-// This while loop will keep repeating until a number is selected that is between 8 and 128
-// Any lower or higher the loop will keep repeating
-while (passlength < 8 || passlength > 128) {
-  passlength = window.prompt("How long do you want your password? (Pick a number between 8 and 128)");
-}
-  
-// These confirm prompts ask the user if they would like to use certain characters in their password.
-// If they click, "Okay" it returns true, if "Cancel" it returns false. 
-charUpOn = window.confirm("Do you want Upper Case Characters?");
-numOn = window.confirm("Do you want Numbers?")
-specCharOn = window.confirm("Do you want Special Characters?");
-
-genPass();
-
-
 
 function writePassword() {
   var password = generatePassword();
@@ -104,3 +106,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+window.alert("Let's create a password!!");
+
+
+genPass();
