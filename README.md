@@ -20,7 +20,7 @@ The goal of this project is to create a generator that creates a password. This 
 ![Generator in Action](./screenshots/screenshot2.JPG)
 
 
---Adding boolean values used to check if a certain password criteria is selected--
+--Adding boolean values used to check if a certain password criteria is selected-- <br>
 --Input prompt for user length password and criteria prompts--
 ![Criteria Prompts](./screenshots/screenshot3.JPG)
 
@@ -28,6 +28,21 @@ The goal of this project is to create a generator that creates a password. This 
 --User prompts in action--
 ![User Prompts in Action](./screenshots/screenshot4.JPG)
 
+
+--Generating a New Password--
+![Generating New Password After Making One](./screenshots/screenshot5.JPG)
+
+
+--Utilizing the HTML instead of Prompts--
+![Switching to HTML From Prompts](./screenshots/screenshot6.JPG)
+
+
+--Final Application (Beginning)--
+![Starting Point](./screenshots/screenshot7.JPG)
+
+
+--Final Application (Ending)--
+![Ending Point](./screenshots/screenshot8.JPG)
 
 
 ## Working Application
