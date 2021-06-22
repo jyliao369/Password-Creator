@@ -73,32 +73,19 @@ var genPass = function() {
   }
 
   if (!charUpOn || !numOn || !specCharOn) {
-    window.alert("This is your new password: " + pass);
-    console.log(pass);
     return (pass);
   } else if (!charUpCheck || !numOnCheck || !specCharCheck || !charCheck) {
     a = 0;
     pass = "";
-    console.log("failed pass")
     genPass();
   } else {
-    window.alert("This is your new password: " + pass);
-    console.log(pass);
     return (pass);
-  }
-
-  var renewPass = window.confirm("Do you want to make a new Password?");
-  if (renewPass) {
-    a = 0;
-    pass = "";
-    passlength = 0;
-    genPass();
   }
 
 }
 
 function writePassword() {
-  var password = genPass();
+  var password = ("This is your new password: " + pass);
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
@@ -106,6 +93,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", function(){
 
+    pass = "";
+    passlength = 0;
     window.alert("Let's create a password!!");
     genPass();
     writePassword();
