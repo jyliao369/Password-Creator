@@ -75,6 +75,7 @@ var genPass = function() {
   if (!charUpOn || !numOn || !specCharOn) {
     window.alert("This is your new password: " + pass);
     console.log(pass);
+    return (pass);
   } else if (!charUpCheck || !numOnCheck || !specCharCheck || !charCheck) {
     a = 0;
     pass = "";
@@ -82,8 +83,8 @@ var genPass = function() {
     genPass();
   } else {
     window.alert("This is your new password: " + pass);
-    
     console.log(pass);
+    return (pass);
   }
 
   var renewPass = window.confirm("Do you want to make a new Password?");
@@ -97,18 +98,22 @@ var genPass = function() {
 }
 
 function writePassword() {
-  var password = generatePassword();
+  var password = genPass();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", function(){
+
+    window.alert("Let's create a password!!");
+    genPass();
+    writePassword();
+
+  }
+);
 
 
-window.alert("Let's create a password!!");
 
 
-genPass();
+
