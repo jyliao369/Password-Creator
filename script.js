@@ -20,6 +20,7 @@ var pass = "";
 var charUpOn = true;
 var numOn = true;
 var specCharOn = true;
+var charLowOn = true;
 // These boolean variables check to see if at least one
 // of each character is in the password.
 var charUpCheck = false;
@@ -41,6 +42,7 @@ var genPass = function() {
   // If they click, "Okay" it returns true, if "Cancel" it returns false. 
 
   charUpOn = window.confirm("Do you want Upper Case Characters?");
+  charLowOn = window.confirm("Do you want Lower Case Characters?");
   numOn = window.confirm("Do you want Numbers?")
   specCharOn = window.confirm("Do you want Special Characters?");
 
@@ -55,7 +57,17 @@ var genPass = function() {
     var ranSpecChar = Math.floor(Math.random() * specChar.length);
     var ranCharSel = Math.floor(Math.random() * charSel.length);
 
+    // This checks to see if any criteria is selected specially if none of the criterias are selected.
+    // If none of the criteria is selected,  there is no point runnin the rest of the function
+    // Thus returns a string to say try again due to no criteria selected.
+    if (!charUpOn && !numOn && !specCharOn && !charLowOn) {
+      pass = "No Criteria Specified. Try Again"
+      return (pass);
+    }
+
     // This will determine which character will be added to the overall password
+    // This works to allow specific criterias to work like only selecting one criteria
+    // like only numbers, only special characters and even only upper or lower case characters
     if (ranCharSel === 0 && charUpOn) {
       pass += char[ranChar].toUpperCase();
       charUpCheck = true;
@@ -65,9 +77,11 @@ var genPass = function() {
     } else if (ranCharSel === 2 && specCharOn) {
       pass += specChar[ranSpecChar];
       specCharCheck = true;
-    } else {
+    } else if (charLowOn) {
       pass += char[ranChar];
       charCheck = true;
+    } else {
+      a--;
     }
 
   }
