@@ -34,6 +34,8 @@ The goal of this project is to create a generator that creates a password. This 
 * Understand the difference between different loops like for and while loops
 * How arrays are formed and number
 * How to add a listener event to perform a specific function
+* understand how to create arrays and how to pull specific types from the array
+* 
 
 ## Screeshots/Image
 --Basic rough draft of the password generator code--
