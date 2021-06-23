@@ -9,7 +9,31 @@ The goal of this project is to create a generator that creates a password. This 
 
 ## Key Topics
 
+* Javascript
+  * Functions
+  * If statements
+  * For and While Loops
+  * Window Prompts, Alerts, and Inputs
+  * Arrays and Booleans
+  * Math.random (random number generator)
+  * toUpperCase();
+  * Console.logs
+  * Iterations
+  * Scopes
+
+* Web API
+  * querySelector
+  * Events
+  * Listeners
+  * setAttribute
+  * DOMS
+  * Append
+
 ## Learning Objectives
+* Understand how to create functions for a certain tasks
+* Understand the difference between different loops like for and while loops
+* How arrays are formed and number
+* How to add a listener event to perform a specific function
 
 ## Screeshots/Image
 --Basic rough draft of the password generator code--
