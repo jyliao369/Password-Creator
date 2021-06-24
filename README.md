@@ -72,3 +72,7 @@ The goal of this project is to create a generator that creates a password. This 
 
 
 ## Working Application
+
+GitHub Repo: https://github.com/jyliao369/Password-Creator
+
+Application Site: https://jyliao369.github.io/Password-Creator/
